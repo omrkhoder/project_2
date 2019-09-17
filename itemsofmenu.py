@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker
 
 from database_setup import Category, Base, Item, User
 
-engine = create_engine('sqlite:///restaurantmenuwithusers.db')
+engine = create_engine('sqlite:///itemcatalog.db')
 # Bind the engine to the metadata of the Base class so that the
 # declaratives can be accessed through a DBSession instance
 Base.metadata.bind = engine
@@ -20,7 +20,8 @@ session = DBSession()
 
 
 # Create dummy user
-User1 = User(name="omrkhoder", email="omrkhoder77@gmail.com")
+User1 = User(name="omrkhoder", email="omrkhoder77@gmail.com",
+             picture='https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png')
 session.add(User1)
 session.commit()
 
