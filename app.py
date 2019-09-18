@@ -293,8 +293,7 @@ def showItem(category_id):
     creator = getUserInfo(category.user_id)
     items = session.query(Item).filter_by(
         category_id=category_id).all()
-    if 'username' not in login_session
-    or creator.id != login_session['user_id']:
+    if 'username' not in login_session or creator.id != login_session['user_id']:
         return render_template('publicitem.html',
                                items=items, category=category, creator=creator)
     else:
