@@ -296,7 +296,7 @@ def newItem(category_id):
     category = session.query(Category).filter_by(id=category_id).one()
     if login_session['user_id'] != category.user_id:
         return "<script>function myFunction() {alert('You are not authorized to add items to this category. Please create your own category in order to add items.');}</script><body onload='myFunction()''>"
-    if request.method == 'POST':
+    if request.method == 'POST' and item is not None:
         newItem = Item(name=request.form['name'], description=request.form['description'], price=request.form[
                            'price'], category_id=category_id, user_id=category.user_id)
         session.add(newItem)
