@@ -41,18 +41,18 @@ This application provides a list of items within a variety of categories as well
 
 11. Install or upgrade Flask:
     ```bash
-    sudo python3 -m pip install --upgrade flask
+    sudo python -m pip install --upgrade flask
     ```
 12. Set up the database:
     ```bash
-    python3 database_setup.py
+    python database_setup.py
     ```
 13. Insert dummy values. **If you don't run this, the application might not run.**
     ```bash
-    python3 itemsofmenu.py
+    python itemsofmenu.py
     ```
 14. Run this application:
     ```bash
-    python3 project.py
+    python app.py
     ```
 15. Open `http://localhost:5000/` in your favourite Web browser, and enjoy.
