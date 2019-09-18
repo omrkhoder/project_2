@@ -11,6 +11,22 @@ This application provides a list of items within a variety of categories as well
 - JSON endpoints.
 - Implements oAuth using Google Sign-in API
 
+## The modules required in this file
+Flask==0.12.0  
+Jinja2==2.8.1  
+gunicorn==19.6.0
+
+So now run:
+
+   ```bash
+   pip  install  -r  requirements.txt
+   ```
+   regardless of any missing dependency, they will be able to smoothly install your app.
+
+To learn more about pip and requirements.txt, also visit this link.
+
+https://pip.readthedocs.io/en/1.1/requirements.html
+
 ## Steps to run this project
 
 1. Download and install [Vagrant](https://www.vagrantup.com/downloads.html).
